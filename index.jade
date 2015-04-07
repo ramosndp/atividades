@@ -1,0 +1,12 @@
+link(rel='stylesheet', href='bower/bootstrap/dist/css/bootstrap.min.css')
+script(type='text/javascript', src='bower/angular/angular.min.js')
+script(type='text/javascript', src='bower/jquery/dist/jquery.min.js')
+script(type='text/javascript', src='app/app.js')
+body(ng-app='app')
+    .container
+        h1 .:Atividades na ESFF:.
+        div(ng-controller='testeCtlr') 
+            .list-group
+                a.list-group-item(href='#')(ng-repeat="atividade in atividades")
+                    h4.list-group-item-heading {{atividade.nome}}
+                    p.list-group-item-text {{atividade.descricao}}
